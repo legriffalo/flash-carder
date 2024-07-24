@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Make your flash cards</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel ='stylesheet' href="./css/main.css">
+  <link rel ='stylesheet' href="./css/cards.css">
+
+
+</head>
+    
+
+<body>
+
+<div class="container">
+<!--Div to hold controls for min functions-->
+    <div id = 'controls'>
+        <div id = 'main_buttons'>
+            <button id = 'use_cards'>make/edit cards
+            </button>
+            <!-- <button id = 'use_cards'>use cards</button> -->
+            <button id = 'save_button'>save data</button>
+        </div>
+
+        <div id = 'select_name'>
+            <select name="select" id="set_select" >
+                <!-- <option value="volvo">Volvo</option> -->
+                
+            </select>  
+
+            <input id = 'set_name' class = 'inputs hidden' type="text" placeholder="Give a name for your flashcard set">
+        </div>
+    </div>
+
+    <!--add new flash card sets-->
+    <div id= 'add_sets' class = 'area hidden'>
+
+      
+
+        <input id = 'question' class = 'inputs' type="text" placeholder="Question">
+        <input id = 'answer' class = 'inputs' type="text" placeholder="Answer">
+        <button id = 'a_button' class = 'special_text'>&#228;</button>
+        <button id = 'o_button' class = 'special_text'>&#246;</button>
+        <button id = 'add_button' class = 'control'>add card</button>
+        <button id = 'remove_button' class = 'control danger'>remove mode</button>
+        <!-- <button id = 'save_set' class = 'control hidden'>save changes</button> -->
+        <button id = 'discard' class = 'control hidden'>discard new set</button>
+        <div id = 'demo_zone'>
+
+        </div>
+    </div>
+
+    <!-- use flashcard sets-->
+    <div id = 'practice' class = 'area'>
+    
+
+        <div id = 'show_zone'>
+
+        </div>
+    </div>
+
+    <div id = 'scores'>
+        <span id = 'score'>xx</span>
+    </div>
+
+</div>
+
+</body>
+
+<script type="text/javascript" src="./js/data.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./js/editadd.js"></script>
+<script type="text/javascript" src="./js/cards.js"></script>
+
+
+
