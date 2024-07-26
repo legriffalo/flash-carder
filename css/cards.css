@@ -1,12 +1,14 @@
 html{
     height: 100%;
-    background: radial-gradient(circle,#fff, #ccc);
+    background: radial-gradient(circle,#fff, #BEC3C6);
 }
 
 .container{
-    background-color: #ccc;
+    background-color: #7A918D;
     text-align: center;
+    border-radius: 5vw;
 }
+
 
 .match{
     border-style:solid;
@@ -23,40 +25,41 @@ html{
     display: flex;
     align-items: center;
     margin:auto;
+    margin-bottom: 3px;
     /* justify-content: center; */
     /* gap:1em; */
 
     width:95%;
-    border-style: solid;
+    /* border-style: solid;
     border-radius:20vh;
-    color:red;
+    color:red; */
     flex-grow: 1;
 
-
-    /* position:relative; */
-    /* justify-items: start; */
 }
 
 .matchem_row .selectable{
     /* border-style: dashed; */
     border-radius:20vh; 
-    flex-grow:1;
+    width:50%;
+    font-size: 2vh;
+    /* flex-grow:1; */
     height:6vh;}
 
 .question{
-    color:red;
+    color:black;
     /* border-style:solid;
     text-align: center; */
     display: flex;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
+    border-style:solid;
     max-width:50%;
-    background-color:white;
+    background-color:#C57B57;
 }
 
 .answer{
-    color:white;
+    color:black;
     /* text-align: center;
     vertical-align: middle; */
     display: flex;
@@ -65,7 +68,7 @@ html{
     border-style:solid;
     max-width:50%;
     /* height:100%; */
-    background-color: blue;
+    background-color:#F7DBA7;
 
 }
 
@@ -73,9 +76,11 @@ html{
 
 .picked{
     background-color:black;
+    color:red;
 }
 .correct{
     background-color:green;
+    color:darkgreen;
 }
 
 #demo_zone{margin-top: 2vh;}

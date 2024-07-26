@@ -1,5 +1,6 @@
 let selectedSet = 'demoset';
 let tempData = '';
+let removeFlag = 0;
 // let demoZone = document.getElementById('demo_zone');
 
 
@@ -31,6 +32,9 @@ const discardChanges = ()=>{
     hideShow('set_name');
     hideShow('discard');
     changeButton();
+    clear('demo_zone');
+    document.getElementById('set_name').value='';
+    document.getElementById('set_select').value='';
     delete flashCards[selectedSet];
 }
 
@@ -88,6 +92,8 @@ addButton.addEventListener('pointerdown',()=>{
 let selecter = document.getElementById("set_select");
 let discard = document.getElementById("discard");
 
+
+
 function handleChange(e){
     selectedSet = e.target.value;
     if(selectedSet!='new'){
@@ -101,8 +107,12 @@ function handleChange(e){
         console.log('new flashcard set started')
         clear('demo_zone');
         clear('show_zone');
-        //change here 
-        practiceButton.innerHTML = 'Use cards';
+
+                //change here 
+
+        // changeButton()
+
+        // practiceButton.innerHTML = 'Use cards';
         document.getElementById('add_sets').classList.remove('hidden');
         document.getElementById('practice').classList.add('hidden');
         hideShow('set_select');
@@ -115,33 +125,52 @@ function handleChange(e){
 
 
 function removeMode(){
-    console.log('activating remove mode');
-    
-    els = document.getElementById('demo_zone').getElementsByClassName('matchem_row');
-    console.log(els.length)
-    for(let i = 0; i<els.length; i++){
-        els[i].innerHTML += '<button class ="remove">X</button>';
+
+    if(removeFlag ==0){
+        removeFlag = 1;
+        console.log('activating remove mode');
+                //change button text 
+        document.getElementById('remove_button').innerHTML = 'Done';
+
+        els = document.getElementById('demo_zone').getElementsByClassName('matchem_row');
+        console.log(els.length)
+        for(let i = 0; i<els.length; i++){
+            els[i].innerHTML += '<button class ="remove">X</button>';
+        }
+
+        let rems = document.getElementsByClassName('remove');
+        
+        for(let i = 0; i<rems.length;i++){
+            rems[i].addEventListener('pointerdown',(e)=>{
+                console.log(e.target.parentElement)
+                let q = e.target.parentElement.getElementsByClassName('question')[0];
+                console.log(q)
+                console.log(q.innerHTML)
+                
+                e.target.parentElement.remove()
+
+                console.log(flashCards[selectedSet])
+                delete flashCards[selectedSet][q.innerHTML]
+
+                console.log(flashCards[selectedSet])
+
+            })
+        }
     }
+    else{
+        //change button text 
+        document.getElementById('remove_button').innerHTML = 'remove mode';
 
-    let rems = document.getElementsByClassName('remove');
-    
-    for(let i = 0; i<rems.length;i++){
-        rems[i].addEventListener('pointerdown',(e)=>{
-            console.log(e.target.parentElement)
-            let q = e.target.parentElement.getElementsByClassName('question')[0];
-             console.log(q)
-             console.log(q.innerHTML)
-            
-            e.target.parentElement.remove()
-
-            console.log(flashCards[selectedSet])
-            delete flashCards[selectedSet][q.innerHTML]
-
-            console.log(flashCards[selectedSet])
-
-        })
+        console.log('deactivating remove mode');
+        removeFlag = 0;
+        let els = document.getElementsByClassName('remove');
+        console.log(els.length);
+        while(els[0]){els[0].remove();
+        }
     }
 };
+
+
 
 selecter.addEventListener('change',handleChange)
 discard.addEventListener('pointerdown',discardChanges)

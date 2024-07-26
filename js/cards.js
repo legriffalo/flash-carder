@@ -85,7 +85,6 @@ const checkMatch = (newSelection,selected)=>{
         score+=1;
 
     }
-    //if incorrect add to mistakes log
     else{
         console.log(newSelection);
         console.log(previousSelection);

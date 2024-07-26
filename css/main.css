@@ -7,7 +7,15 @@
 
 
 }
+
+.hidden{
+    display:none;
+    height:0px;
+    opacity:0;
+}
+
 #main_buttons{
+    
     width:95%;
     margin:auto;
     display:flex;
@@ -17,6 +25,10 @@
 
 #main_buttons button{
     width:100%;
+    background-color: #BEC3C6;
+    border-radius: 5vh;
+    height:3vh;
+    font-size: 2vh;
 }
 
 #controls{
@@ -33,11 +45,7 @@
     height:80vh;
 }
 
-.hidden{
-    display:none;
-    height:0px;
-    opacity:0;
-}
+
 
 .inputs{
     color:black;
@@ -58,11 +66,12 @@ select:invalid{
     margin: 0 0 0 0;
 }
 
+
 #set_select{
-    /* margin-right:5vw;    */
     width:70vw;
+    font-size: 2vh;
 }
+
 #set_name{
-    /* margin-right:5vw;    */
     width:70vw;
 }
