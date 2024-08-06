@@ -49,7 +49,7 @@
 
 .inputs{
     color:black;
-    width:40vw;
+    width:60vw;
     border-style:solid;
     margin:auto;
     display:block;
@@ -120,4 +120,19 @@ select:invalid{
 
 }
 
-#question{display:block;}
+/* #question{display:block;} */
+
+#logo{
+    position:fixed;
+    top:30vh;
+    left: 30vw;
+    width:40vw;
+    height:40vh;
+}
+
+.control{
+    border-style:solid;
+    background-color: #F25F5C;
+    color:white;
+    border-radius: 2vh;
+}

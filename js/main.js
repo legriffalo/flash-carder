@@ -30,7 +30,7 @@ function saveData(){
 }
 // set variables and add listeners for main page.
 function changeButton(){
-    practiceButton.innerHTML=='make/edit cards'? practiceButton.innerHTML = 'Use cards':practiceButton.innerHTML = 'make/edit cards';
+    practiceButton.innerHTML=='make/edit'? practiceButton.innerHTML = 'Use':practiceButton.innerHTML = 'make/edit';
 }
 //tracks which input box is active
 let active ='';
@@ -46,6 +46,7 @@ let removeButton = document.getElementById('remove_button');
 let advanced = document.getElementById('advanced');
 
 // add all event listeners
+document.addEventListener('pointerdown',()=>{document.getElementById('logo').classList.add('hidden')});
 practiceButton.addEventListener('pointerdown',()=>{hideShow('add_sets');hideShow('practice');hideShow('scores');changeButton()});
 aButton.addEventListener('pointerdown',()=>{insertText("ä")});
 oButton.addEventListener('pointerdown',()=>{insertText('ö')});
