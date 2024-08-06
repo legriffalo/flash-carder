@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel ='stylesheet' href="./css/main.css">
   <link rel ='stylesheet' href="./css/cards.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
 </head>
@@ -20,6 +21,7 @@
             <button id = 'use_cards'>make/edit cards</button>
             <!-- <button id = 'use_cards'>use cards</button> -->
             <button id = 'save_button'>save data</button>
+            <button id = 'advanced'><i class="fas fa-bars"></i>+</button>
         </div>
 
         <div id = 'select_name'>
@@ -30,13 +32,13 @@
 
             <input id = 'set_name' class = 'inputs hidden' type="text" placeholder="Give a name for your flashcard set">
         </div>
+
     </div>
 
     <!--add new flash card sets-->
     <div id= 'add_sets' class = 'area hidden'>
 
       
-
         <input id = 'question' class = 'inputs' type="text" placeholder="Question">
         <input id = 'answer' class = 'inputs' type="text" placeholder="Answer">
         <button id = 'a_button' class = 'special_text'>&#228;</button>
@@ -50,6 +52,34 @@
         </div>
     </div>
 
+
+    <div id = 'additional_options' class = 'hidden'>
+            <button id = "import_button" class = 'menu'>Import data</button>
+            <button id = "export_button" class = 'menu'>Export data</button>
+            <button id = "reset_button" class = 'menu danger'>reset data</button>
+
+        <div id = 'data_window_output' class = hidden>
+            <textarea id = "text_area_output" class = "text_area" placeholder="data here..."></textarea>
+
+            <button id = "copy_button" class = "hidden"><i class="far fa-copy"></i></button>        
+        </div>
+
+        <div id = 'data_window_input' class = hidden>
+            <textarea id = "text_area_input" class = "text_area" placeholder="data here..."></textarea>
+
+            <button id = "copy_button" class = "hidden"><i class="far fa-copy"></i></button>        
+        </div>
+
+
+
+
+
+
+        <button id = "submit_button" class = "hidden"><i class="fas fa-file-import"></i></button>
+
+    </div>
+
+
     <!-- use flashcard sets-->
     <div id = 'practice' class = 'area'>
     
@@ -60,7 +90,7 @@
     </div>
 
     <div id = 'scores'>
-        <span id = 'score'>xx</span>
+        <span id = 'score'></span>
     </div>
 
 </div>
@@ -71,6 +101,7 @@
 <script type="text/javascript" src="./js/main.js"></script>
 <script type="text/javascript" src="./js/editadd.js"></script>
 <script type="text/javascript" src="./js/cards.js"></script>
+<script type="text/javascript" src="./js/datamenu.js"></script>
 
 
 

@@ -119,6 +119,16 @@ const checkMatch = (newSelection,selected)=>{
     scorePanel.innerHTML = `${score}/${Object.keys(flashCards[selectedSet]).length + wrong}`
     console.log(selected)
 
+    // check all are completed and update scores
+    let corrects = document.getElementsByClassName('correct');
+    let selectables = document.getElementsByClassName('selectable')
+    console.log(corrects.length);
+    console.log(selectables.length)
+    if(corrects.length == selectables.length){
+        console.log('all questions completed!!!!\n\n\n\n\n');
+        scores[selectedSet] = `${score}/${Object.keys(flashCards[selectedSet]).length + wrong}`;
+    }
+    else{}
 }
 
 

@@ -19,9 +19,10 @@ const buildMatchemPreview = (target,data)=>{
         let question = questions[i];
         let answer = answers[i];
         // console.log(question,answer);
+        // removed selectable class
         document.getElementById(target).innerHTML+=`<div class = "matchem_row">
-        <div class = "selectable question " data-type="">${question}</div>
-        <div class = "selectable answer " data-type="">${answer}</div>
+        <div class = "unselectable question " data-type="">${question}</div>
+        <div class = "unselectable answer " data-type="">${answer}</div>
         </div>`;
     }
     return 1
@@ -47,7 +48,7 @@ const discardChanges = ()=>{
 let sets = Object.keys(flashCards);
 document.getElementById('set_select').innerHTML+='<option value="" disabled selected hidden>Choose a flash card set...</option>'
 for(i=0;i<sets.length;i++){
-    document.getElementById('set_select').innerHTML+=`<option value="${sets[i]}">${sets[i]}</option>`;
+    document.getElementById('set_select').innerHTML+=`<option value="${sets[i]}">${sets[i]} (${scores[sets[i]]})</option>`;
 }
 document.getElementById('set_select').innerHTML+=`<option >new</option>`;
 
@@ -107,11 +108,6 @@ function handleChange(e){
         console.log('new flashcard set started')
         clear('demo_zone');
         clear('show_zone');
-
-                //change here 
-
-        // changeButton()
-
         // practiceButton.innerHTML = 'Use cards';
         document.getElementById('add_sets').classList.remove('hidden');
         document.getElementById('practice').classList.add('hidden');
@@ -135,7 +131,7 @@ function removeMode(){
         els = document.getElementById('demo_zone').getElementsByClassName('matchem_row');
         console.log(els.length)
         for(let i = 0; i<els.length; i++){
-            els[i].innerHTML += '<button class ="remove">X</button>';
+            els[i].innerHTML += '<button class ="remove"><i class="fas fa-trash-alt"></i></button>';
         }
 
         let rems = document.getElementsByClassName('remove');
@@ -143,11 +139,11 @@ function removeMode(){
         for(let i = 0; i<rems.length;i++){
             rems[i].addEventListener('pointerdown',(e)=>{
                 console.log(e.target.parentElement)
-                let q = e.target.parentElement.getElementsByClassName('question')[0];
+                let q = e.target.parentElement.parentElement.getElementsByClassName('question')[0];
                 console.log(q)
                 console.log(q.innerHTML)
                 
-                e.target.parentElement.remove()
+                e.target.parentElement.parentElement.remove()
 
                 console.log(flashCards[selectedSet])
                 delete flashCards[selectedSet][q.innerHTML]

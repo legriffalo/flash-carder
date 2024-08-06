@@ -1,5 +1,4 @@
-let flashCards = localStorage.getItem("cards")? JSON.parse(localStorage.getItem("cards")): {
-    "demoset":{
+let flashCards = localStorage.getItem("cards")? JSON.parse(localStorage.getItem("cards")): {"demoset":{
         "bottle":"pullo",
         "station":"asema",
         "shelf":"hylly",
@@ -16,7 +15,22 @@ let flashCards = localStorage.getItem("cards")? JSON.parse(localStorage.getItem(
     }
 };
 
-console.log('check your data')
 
+let scores = {};
 
-console.log(flashCards)
+if(localStorage.getItem('scores')){
+    scores = JSON.parse(localStorage.getItem('scores'));
+}
+else{
+    let keys = Object.keys(flashCards);
+
+    for(let i = 0; i<keys.length; i++){
+        console.log(keys[i])
+        scores[keys[i]] = '-';
+    }
+}
+console.log('scores');
+console.log(scores);
+
+console.log(flashCards);
+console.log(flashCards);

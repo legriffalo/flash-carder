@@ -2,6 +2,9 @@
 function hideShow(target){
     document.getElementById(target).classList.toggle('hidden');
 }
+function toggleActive(target){
+    document.getElementById(target).classList.toggle('active_button');
+};
 
 // clear a target of innerHTML
 const clear = (target)=>{
@@ -21,6 +24,9 @@ function insertText(text){
 
 function saveData(){
     localStorage.setItem("cards",JSON.stringify(flashCards));
+    localStorage.setItem('scores',JSON.stringify(scores));
+    location.reload();
+
 }
 // set variables and add listeners for main page.
 function changeButton(){
@@ -37,6 +43,7 @@ let oButton = document.getElementById('o_button');
 let addButton = document.getElementById('add_button');
 let saveButton = document.getElementById('save_button');
 let removeButton = document.getElementById('remove_button');
+let advanced = document.getElementById('advanced');
 
 // add all event listeners
 practiceButton.addEventListener('pointerdown',()=>{hideShow('add_sets');hideShow('practice');hideShow('scores');changeButton()});
@@ -44,3 +51,4 @@ aButton.addEventListener('pointerdown',()=>{insertText("ä")});
 oButton.addEventListener('pointerdown',()=>{insertText('ö')});
 saveButton.addEventListener('pointerdown',()=>{saveData()})
 removeButton.addEventListener('pointerdown',()=>{removeMode()});
+advanced.addEventListener('pointerdown', ()=>{hideShow('additional_options'); toggleActive('advanced')});
