@@ -8,12 +8,14 @@
     display:none;
     height:0px;
     opacity:0;
+    overflow-y: none;
 }
 
 #main_buttons{
     
     width:95%;
     margin:auto;
+    margin-top:1vh;
     display:flex;
     flex-direction: row;
     /* border-style: solid; */
@@ -63,19 +65,23 @@ select:invalid{
     margin:auto;
     align-content: center;
     /* margin-bottom:2vh; */
+    height:10vh;
     width:75vw;
+    border-color:white;
+    /* border-style:dashed; */
 }
 #select_name p {
     margin: 0 0 0 0;
 }
 
 .menu{
-    width:18vw;
+    width:15vw;
     height:6vh;
     color:#F6F8FF;
     border-style:solid;
     background-color: #F25F5C;
     border-radius: 5vh;
+    font-size:2.5vmin;
     /* display:flex;
     flex-direction:row; */
 
@@ -104,12 +110,15 @@ select:invalid{
 }
 
 #additional_options{
+    border-radius: 2vh;
+    padding: 5px;
     position:fixed;
-    top:15vh;
-    left:20vw;
-    height:75vh;
-    background-color: white;
-    width:60vw;
+    top:7vh;
+    left:12vw;
+    min-height:10vh;
+    max-height:67vh;
+    background-color: rgba(255,255,255,0.8);
+    width:75vw;
 }
 
 
@@ -135,4 +144,39 @@ select:invalid{
     background-color: #F25F5C;
     color:white;
     border-radius: 2vh;
+}
+
+.fas.fa-archive{color:white}
+
+
+.archived{
+    margin-top: 1vh;
+    height:7vh;
+    display:flex;
+    flex-direction: row;
+    border-style:solid;
+}
+
+.archived>div p{
+    margin:0 0 0 0 
+}
+
+.archived>div:first-child{
+    width:80%;
+    border-style:dashed;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.archived>div:last-child{
+    width:20%;
+    border-style:dashed;
+    display: flex;
+    flex-direction: column;
+   /* align-items: center; */
+  justify-content: center; 
+    
 }

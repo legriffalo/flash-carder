@@ -10,7 +10,6 @@ const randomise = (x)=>{
     }
     return y
 };
-
 //function that build matching activities
 const buildMatchem= (target,data)=>{
 
@@ -37,10 +36,7 @@ const buildMatchem= (target,data)=>{
     activateListeners();
     score = 0;
     return 1
-}
-
-
-
+};
 // use two elements to check if they match
 const checkMatch = (newSelection,selected)=>{
     console.log('adding picked')
@@ -58,10 +54,6 @@ const checkMatch = (newSelection,selected)=>{
     newSelection.classList.contains("answer")? selected["answer"]= newSelection.innerHTML:0;
     console.log(selected)
   
-
-
-
-
     // set variables for comparison
     let question = selected["question"];
     let answer = selected["answer"]
@@ -129,12 +121,8 @@ const checkMatch = (newSelection,selected)=>{
         scores[selectedSet] = `${score}/${Object.keys(flashCards[selectedSet]).length + wrong}`;
     }
     else{}
-}
-
-
-
+};
 //activate eventListeners for matching 
-
 const activateListeners = ()=>{
     console.log('adding listeners')
 
@@ -144,4 +132,4 @@ const activateListeners = ()=>{
         checkMatch(e.target,selected)
         })
     }
-} 
+};

@@ -35,59 +35,79 @@
 
     </div>
     <img id = 'logo' src = "./assets/logo.png">
+
     <!--add new flash card sets-->
     <div id= 'add_sets' class = 'area hidden'>
 
       
         <input id = 'question' class = 'inputs' type="text" placeholder="Question">
         <input id = 'answer' class = 'inputs' type="text" placeholder="Answer">
+
+
+        <!--  * toggle hideshow for mobile devices* -->
         <button id = 'a_button' class = 'special_text'>&#228;</button>
         <button id = 'o_button' class = 'special_text'>&#246;</button>
+
+
         <button id = 'add_button' class = 'control'>add card</button>
         <button id = 'remove_button' class = 'control danger'>remove mode</button>
         <!-- <button id = 'save_set' class = 'control hidden'>save changes</button> -->
         <button id = 'discard' class = 'control hidden'>discard new set</button>
+
         <div id = 'demo_zone'>
+
+        </div>
+
+
+
+
+        
+    </div>
+
+    <!-- use flashcard sets-->
+    <div id = 'practice' class = 'area'>
+
+
+        <div id = 'show_zone'>
 
         </div>
     </div>
 
-
+    <!--additional options section-->
     <div id = 'additional_options' class = 'hidden'>
-            <button id = "import_button" class = 'menu'>Import data</button>
-            <button id = "export_button" class = 'menu'>Export data</button>
-            <button id = "reset_button" class = 'menu danger'>Reset data</button>
+        <button id = "import_button" class = 'menu'>Import data</button>
+        <button id = "export_button" class = 'menu'>Export data</button>
+        <button id = "access_archive" class = 'menu'>Archived data</button>
+        <button id = "reset_button" class = 'menu danger'>Reset data</button>
 
+
+
+        
+        <!-- div for data inputs -->
+        <div id = 'data_window_input' class = hidden>
+            <textarea id = "text_area_input" class = "text_area" placeholder="data here..."></textarea>
+
+            <button id = "submit_button" class = "hidden"><i class="fas fa-file-import"></i></button>
+        
+        </div>
+
+        <!-- Div for data copy output -->
         <div id = 'data_window_output' class = hidden>
             <textarea id = "text_area_output" class = "text_area" placeholder="data here..."></textarea>
 
             <button id = "copy_button" class = "hidden"><i class="far fa-copy"></i></button>        
         </div>
 
-        <div id = 'data_window_input' class = hidden>
-            <textarea id = "text_area_input" class = "text_area" placeholder="data here..."></textarea>
+        <!-- div for data archived to appear -->
+        <div id = "archive_window" class = 'hidden'>
 
-            <button id = "copy_button" class = "hidden"><i class="far fa-copy"></i></button>        
         </div>
 
-
-
-
-
-
-        <button id = "submit_button" class = "hidden"><i class="fas fa-file-import"></i></button>
 
     </div>
 
 
-    <!-- use flashcard sets-->
-    <div id = 'practice' class = 'area'>
-    
 
-        <div id = 'show_zone'>
-
-        </div>
-    </div>
 
     <div id = 'scores'>
         <span id = 'score'></span>

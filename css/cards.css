@@ -9,18 +9,6 @@ html{
     border-radius: 5vw;
 }
 
-
-/* .match{
-    border-style:solid;
-    border-radius: 10vw;
-    width:90vw;
-    min-height:30vh;
-    margin:auto; 
-    margin-bottom:5vh;
-    background-color: aquamarine;
-} */
-
-
 .matchem_row{
     display: flex;
     align-items: center;
