@@ -112,7 +112,7 @@
     <div id = 'scores'>
         <span id = 'score'></span>
     </div>
-
+<span>ver 1.00 </span>
 </div>
 
 </body>
@@ -122,6 +122,14 @@
 <script type="text/javascript" src="./js/editadd.js"></script>
 <script type="text/javascript" src="./js/cards.js"></script>
 <script type="text/javascript" src="./js/datamenu.js"></script>
-
+<!-- Activate service worker if available -->
+<script>
+    if (navigator.serviceWorker) {
+  navigator.serviceWorker.register (
+    './service_worker.js',
+    {scope:"/flash-carder/"}
+  )
+}
+</script>
 
 
