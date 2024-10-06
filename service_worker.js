@@ -7,7 +7,7 @@ var APP_PREFIX = 'FC';
 // you need to change this version (version_01, version_02…). 
 // If you don't change the version, the service worker will give your
 // users the old files!
-var VERSION = 'version_1.00';
+var VERSION = 'version_1.01';
 
 var CACHE_NAME = APP_PREFIX + VERSION
 

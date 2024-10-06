@@ -106,11 +106,11 @@ document.getElementById('copy_button').addEventListener('pointerdown',()=>{
     } else{
         navigator.clipboard.writeText(text_to_copy).then(
             function(){
-                alert("yeah!"); // success 
+                console.log("yeah!"); // success 
             })
         .catch(
             function() {
-                alert("err"); // error
+                console.log("err"); // error
         });
     } 
 });
