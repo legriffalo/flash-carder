@@ -1,136 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Make your flash cards</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel ='stylesheet' href="./css/main.css">
-  <link rel ='stylesheet' href="./css/cards.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="manifest" href="manifest.json" />
+  <head>
+    <title>Make your flash cards</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/cards.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="manifest" href="manifest.json" />
+  </head>
 
-
-</head>
-    
-
-<body>
-
-<div class="container">
-<!--Div to hold controls for min functions-->
-    <div id = 'controls'>
-        <div id = 'main_buttons'>
-            <button id = 'use_cards'>make/edit</button>
-            <!-- <button id = 'use_cards'>use cards</button> -->
-            <button id = 'save_button'>save data</button>
-            <button id = 'advanced'><i class="fas fa-bars"></i>+</button>
+  <body>
+    <div class="container">
+      <!--Div to hold controls for min functions-->
+      <div id="controls">
+        <div id="main_buttons">
+          <button id="use_cards">make/edit</button>
+          <!-- <button id = 'use_cards'>use cards</button> -->
+          <button id="save_button">save data</button>
+          <button id="advanced"><i class="fas fa-bars"></i>+</button>
         </div>
 
-        <div id = 'select_name'>
-            <select name="select" id="set_select" >
-                <!-- <option value="volvo">Volvo</option> -->
-                
-            </select>  
+        <div id="select_name">
+          <select name="select" id="set_select">
+            <!-- <option value="volvo">Volvo</option> -->
+          </select>
 
-            <input id = 'set_name' class = 'inputs hidden' type="text" placeholder="Give a name for your flashcard set">
+          <input
+            id="set_name"
+            class="inputs hidden"
+            type="text"
+            placeholder="Give a name for your flashcard set"
+          />
         </div>
+      </div>
+      <img id="logo" src="./assets/logo.png" />
 
-    </div>
-    <img id = 'logo' src = "./assets/logo.png">
-
-    <!--add new flash card sets-->
-    <div id= 'add_sets' class = 'area hidden'>
-
-      
-        <input id = 'question' class = 'inputs' type="text" placeholder="Question">
-        <input id = 'answer' class = 'inputs' type="text" placeholder="Answer">
-
+      <!--add new flash card sets-->
+      <div id="add_sets" class="area hidden">
+        <input
+          id="question"
+          class="inputs"
+          type="text"
+          placeholder="Question"
+        />
+        <input id="answer" class="inputs" type="text" placeholder="Answer" />
 
         <!--  * toggle hideshow for mobile devices* -->
-        <button id = 'a_button' class = 'special_text'>&#228;</button>
-        <button id = 'o_button' class = 'special_text'>&#246;</button>
+        <button id="a_button" class="special_text">&#228;</button>
+        <button id="o_button" class="special_text">&#246;</button>
 
-
-        <button id = 'add_button' class = 'control'>add card</button>
-        <button id = 'remove_button' class = 'control danger'>remove mode</button>
+        <button id="add_button" class="control">add card</button>
+        <button id="remove_button" class="control danger">remove mode</button>
         <!-- <button id = 'save_set' class = 'control hidden'>save changes</button> -->
-        <button id = 'discard' class = 'control hidden'>discard new set</button>
+        <button id="discard" class="control hidden">discard new set</button>
 
-        <div id = 'demo_zone'>
+        <div id="demo_zone"></div>
+      </div>
 
-        </div>
+      <!-- use flashcard sets-->
+      <div id="practice" class="area">
+        <div id="show_zone"></div>
+      </div>
 
+      <!--additional options section-->
+      <div id="additional_options" class="hidden">
+        <button id="import_button" class="menu">Import data</button>
+        <button id="export_button" class="menu">Export data</button>
+        <button id="access_archive" class="menu">Archived data</button>
+        <button id="reset_button" class="menu danger">Reset data</button>
 
-
-
-        
-    </div>
-
-    <!-- use flashcard sets-->
-    <div id = 'practice' class = 'area'>
-
-
-        <div id = 'show_zone'>
-
-        </div>
-    </div>
-
-    <!--additional options section-->
-    <div id = 'additional_options' class = 'hidden'>
-        <button id = "import_button" class = 'menu'>Import data</button>
-        <button id = "export_button" class = 'menu'>Export data</button>
-        <button id = "access_archive" class = 'menu'>Archived data</button>
-        <button id = "reset_button" class = 'menu danger'>Reset data</button>
-
-
-
-        
         <!-- div for data inputs -->
-        <div id = 'data_window_input' class = hidden>
-            <textarea id = "text_area_input" class = "text_area" placeholder="data here..."></textarea>
+        <div id="data_window_input" class="hidden">
+          <textarea
+            id="text_area_input"
+            class="text_area"
+            placeholder="data here..."
+          ></textarea>
 
-            <button id = "submit_button" class = "hidden"><i class="fas fa-file-import"></i></button>
-        
+          <button id="submit_button" class="hidden">
+            <i class="fas fa-file-import"></i>
+          </button>
         </div>
 
         <!-- Div for data copy output -->
-        <div id = 'data_window_output' class = hidden>
-            <textarea id = "text_area_output" class = "text_area" placeholder="data here..."></textarea>
+        <div id="data_window_output" class="hidden">
+          <textarea
+            id="text_area_output"
+            class="text_area"
+            placeholder="data here..."
+          ></textarea>
 
-            <button id = "copy_button" class = "hidden"><i class="far fa-copy"></i></button>        
+          <button id="copy_button" class="hidden">
+            <i class="far fa-copy"></i>
+          </button>
         </div>
 
         <!-- div for data archived to appear -->
-        <div id = "archive_window" class = 'hidden'>
+        <div id="archive_window" class="hidden"></div>
+      </div>
 
-        </div>
-
-
+      <div id="scores">
+        <span id="score"></span>
+      </div>
+      <span>ver 1.01 </span>
     </div>
+  </body>
 
-
-
-
-    <div id = 'scores'>
-        <span id = 'score'></span>
-    </div>
-<span>ver 1.01 </span>
-</div>
-
-</body>
-
-<script type="text/javascript" src="./js/data.js"></script>
-<script type="text/javascript" src="./js/main.js"></script>
-<script type="text/javascript" src="./js/editadd.js"></script>
-<script type="text/javascript" src="./js/cards.js"></script>
-<script type="text/javascript" src="./js/datamenu.js"></script>
-<!-- Activate service worker if available -->
-<script>
+  <script type="text/javascript" src="./js/data.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="./js/editadd.js"></script>
+  <script type="text/javascript" src="./js/cards.js"></script>
+  <script type="text/javascript" src="./js/datamenu.js"></script>
+  <!-- Activate service worker if available -->
+  <script>
     if (navigator.serviceWorker) {
-  navigator.serviceWorker.register (
-    './service_worker.js',
-    {scope:"/flash-carder/"}
-  )
-}
-</script>
-
-
+        navigator.serviceWorker.register("./service_worker.js", {
+        scope: "/flash-carder/",
+      });
+    }
+  </script>
+</html>
