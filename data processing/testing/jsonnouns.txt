@@ -8,9 +8,7 @@
 	"man":"mies", 
 	"man":"yrkö", 
 	"man":"jannu", 
-	"man":"mieshenkilö"
-	}, 
-"nouns1":{
+	"man":"mieshenkilö", 
 	"way":"tie", 
 	"people":"kansa", 
 	"people":"rahvas", 
@@ -32,9 +30,7 @@
 	"kid":"vohla", 
 	"boy":"poju", 
 	"boy":"poika", 
-	"boy":"poikaparka"
-	}, 
-"nouns3":{
+	"boy":"poikaparka", 
 	"night":"yö", 
 	"year":"ajastaika", 
 	"mom":"mami", 
@@ -56,9 +52,7 @@
 	"girl":"plikka", 
 	"girl":"tyttö", 
 	"girl":"tytti", 
-	"girl":"kimma"
-	}, 
-"nouns5":{
+	"girl":"kimma", 
 	"girl":"likka", 
 	"girl":"friidu", 
 	"girl":"kotiapulainen", 
@@ -80,9 +74,7 @@
 	"home":"koto", 
 	"hell":"helvetti", 
 	"hell":"hevonkuusi", 
-	"hell":"horna"
-	}, 
-"nouns7":{
+	"hell":"horna", 
 	"minute":"minuutti", 
 	"place":"perukka", 
 	"place":"paikka", 
@@ -104,9 +96,7 @@
 	"house":"talo", 
 	"school":"opinahjo", 
 	"school":"skole", 
-	"school":"koulukunta"
-	}, 
-"nouns9":{
+	"school":"koulukunta", 
 	"car":"auto", 
 	"car":"kiesi", 
 	"idea":"oivallus", 
@@ -128,9 +118,7 @@
 	"party":"osapuoli", 
 	"party":"bileet", 
 	"party":"pirskeet", 
-	"party":"kemut"
-	}, 
-"nouns11":{
+	"party":"kemut", 
 	"party":"kokoomuslainen", 
 	"party":"seurue", 
 	"party":"bailut", 
@@ -152,9 +140,7 @@
 	"course":"kurssi", 
 	"course":"meno", 
 	"game":"maaottelu", 
-	"game":"riista"
-	}, 
-"nouns13":{
+	"game":"riista", 
 	"doctor":"tohtori", 
 	"dollar":"dollari", 
 	"dollar":"taala", 
@@ -176,9 +162,7 @@
 	"mother":"emä", 
 	"mother":"äiti", 
 	"mother":"muori", 
-	"mother":"emo"
-	}, 
-"nouns15":{
+	"mother":"emo", 
 	"mother":"maammo", 
 	"word":"sana", 
 	"word":"sananen", 
@@ -200,9 +184,7 @@
 	"number":"ohjelmanumero", 
 	"number":"luku", 
 	"number":"lukumäärä", 
-	"morning":"huomen"
-	}, 
-"nouns17":{
+	"morning":"huomen", 
 	"morning":"aamupäivä", 
 	"morning":"aamu", 
 	"tomorrow":"huominen", 
@@ -224,9 +206,7 @@
 	"hand":"hanslankari", 
 	"hand":"handu", 
 	"television":"telkku", 
-	"television":"telkkari"
-	}, 
-"nouns19":{
+	"television":"telkkari", 
 	"television":"telkka", 
 	"television":"televisio", 
 	"television":"teevee", 
@@ -248,9 +228,7 @@
 	"office":"konttori", 
 	"food":"syötävä", 
 	"food":"ruoka", 
-	"food":"särvin"
-	}, 
-"nouns21":{
+	"food":"särvin", 
 	"food":"murkina", 
 	"food":"safka", 
 	"food":"sapuska", 
@@ -272,9 +250,7 @@
 	"brother":"broidi", 
 	"brother":"veljes", 
 	"brother":"veli", 
-	"brother":"veikko"
-	}, 
-"nouns23":{
+	"brother":"veikko", 
 	"work":"työ", 
 	"work":"souvi", 
 	"work":"teos", 
@@ -296,9 +272,7 @@
 	"picture":"kuva", 
 	"side":"ohi", 
 	"love":"lempi", 
-	"love":"rakkaus"
-	}, 
-"nouns25":{
+	"love":"rakkaus", 
 	"mind":"mieli", 
 	"hair":"tukka", 
 	"hair":"karva", 
@@ -320,9 +294,7 @@
 	"bed":"vuode", 
 	"bed":"peti", 
 	"paper":"paperi", 
-	"paper":"papru"
-	}, 
-"nouns27":{
+	"paper":"papru", 
 	"face":"nassu", 
 	"face":"naama", 
 	"face":"kuvapuoli", 
@@ -344,9 +316,7 @@
 	"point":"kärki", 
 	"point":"pluspiste", 
 	"point":"ilmansuunta", 
-	"point":"pointti"
-	}, 
-"nouns29":{
+	"point":"pointti", 
 	"fact":"tosio", 
 	"fact":"fakta", 
 	"fact":"faktumi", 
@@ -368,9 +338,7 @@
 	"chance":"mahis", 
 	"card":"kortti", 
 	"card":"pelikortti", 
-	"song":"laulu"
-	}, 
-"nouns31":{
+	"song":"laulu", 
 	"song":"biisi", 
 	"song":"hitti", 
 	"song":"viisu", 
@@ -392,9 +360,7 @@
 	"dream":"unelma", 
 	"dream":"haave", 
 	"dream":"uni", 
-	"water":"lapsivesi"
-	}, 
-"nouns33":{
+	"water":"lapsivesi", 
 	"water":"vesi", 
 	"water":"voda", 
 	"water":"kylpyvesi", 
@@ -416,9 +382,7 @@
 	"front":"etumus", 
 	"front":"etupuoli", 
 	"front":"edus", 
-	"front":"edusta"
-	}, 
-"nouns35":{
+	"front":"edusta", 
 	"moment":"kotva", 
 	"moment":"hetki", 
 	"moment":"tuokio", 
@@ -440,9 +404,7 @@
 	"table":"taulukko", 
 	"ticket":"pääsylippu", 
 	"ticket":"lipuke", 
-	"cat":"ankkuritalja"
-	}, 
-"nouns37":{
+	"cat":"ankkuritalja", 
 	"cat":"tassu", 
 	"cat":"kissa", 
 	"cat":"katti", 
@@ -464,9 +426,7 @@
 	"gift":"anne", 
 	"street":"kartsa", 
 	"street":"katu", 
-	"team":"tiimi"
-	}, 
-"nouns39":{
+	"team":"tiimi", 
 	"seat":"istuin", 
 	"foot":"jalkaterä", 
 	"foot":"jalka", 
@@ -488,9 +448,7 @@
 	"fire":"valkea", 
 	"fire":"poppa", 
 	"fire":"notski", 
-	"fire":"praasu"
-	}, 
-"nouns41":{
+	"fire":"praasu", 
 	"fire":"liesi", 
 	"fire":"tuli", 
 	"fire":"palo", 
@@ -512,9 +470,7 @@
 	"key":"selite", 
 	"key":"näppäin", 
 	"end":"pääty", 
-	"help":"ohje"
-	}, 
-"nouns43":{
+	"help":"ohje", 
 	"help":"avitus", 
 	"help":"apu", 
 	"help":"auttelu", 
@@ -536,9 +492,7 @@
 	"music":"musiikki", 
 	"music":"musa", 
 	"music":"soitto", 
-	"war":"sota"
-	}, 
-"nouns45":{
+	"war":"sota", 
 	"war":"krigu", 
 	"light":"valo", 
 	"light":"klahvituoli", 
@@ -560,9 +514,7 @@
 	"boyfriend":"boyfriend", 
 	"boyfriend":"poikaystävä", 
 	"plan":"suunnite", 
-	"plan":"suunnitelma"
-	}, 
-"nouns47":{
+	"plan":"suunnitelma", 
 	"mistake":"kupru", 
 	"mistake":"virhe", 
 	"mistake":"erehdys", 
@@ -584,9 +536,7 @@
 	"college":"college", 
 	"message":"viesti", 
 	"fault":"siirros", 
-	"shirt":"paita"
-	}, 
-"nouns49":{
+	"shirt":"paita", 
 	"attention":"huomio", 
 	"power":"teho", 
 	"power":"yty", 
@@ -608,9 +558,7 @@
 	"death":"kuolo", 
 	"death":"kalma", 
 	"death":"ikiuni", 
-	"death":"tuoni"
-	}, 
-"nouns51":{
+	"death":"tuoni", 
 	"death":"kuolema", 
 	"tree":"puu", 
 	"boss":"pomo", 
@@ -632,9 +580,7 @@
 	"drink":"juotava", 
 	"drink":"drinkki", 
 	"drink":"juoma", 
-	"drink":"kulaus"
-	}, 
-"nouns53":{
+	"drink":"kulaus", 
 	"drink":"ryyppy", 
 	"drink":"häppä", 
 	"trip":"huumetrippi", 
@@ -656,9 +602,7 @@
 	"restaurant":"rafla", 
 	"tooth":"hammas", 
 	"marriage":"avioliitto", 
-	"marriage":"naimakauppa"
-	}, 
-"nouns55":{
+	"marriage":"naimakauppa", 
 	"uncle":"setä", 
 	"butt":"tumppi", 
 	"lord":"lordi", 
@@ -680,9 +624,7 @@
 	"ring":"rengas", 
 	"ring":"sormus", 
 	"pizza":"pizza", 
-	"pizza":"pitsa"
-	}, 
-"nouns57":{
+	"pizza":"pitsa", 
 	"hospital":"lasaretti", 
 	"police":"poliisi", 
 	"police":"ohrana", 
@@ -704,9 +646,7 @@
 	"pie":"piirakka", 
 	"pie":"pai", 
 	"pie":"piiras", 
-	"sandwich":"kerrosvoileipä"
-	}, 
-"nouns59":{
+	"sandwich":"kerrosvoileipä", 
 	"sale":"myynti", 
 	"sale":"alennusmyynti", 
 	"boat":"botski", 
@@ -728,9 +668,7 @@
 	"toilet":"pihan perä", 
 	"toilet":"toiletti", 
 	"shit":"hevonperse", 
-	"shit":"paska"
-	}, 
-"nouns61":{
+	"shit":"paska", 
 	"shit":"hevonpaska", 
 	"wall":"seinä", 
 	"wall":"seinusta", 
@@ -752,9 +690,7 @@
 	"state":"ugandalaisuus", 
 	"state":"agnostisuus", 
 	"state":"afrikkalaisuus", 
-	"king":"kuningas"
-	}, 
-"nouns63":{
+	"king":"kuningas", 
 	"cookie":"eväste", 
 	"cookie":"keksi", 
 	"penis":"jorma", 
@@ -776,9 +712,7 @@
 	"system":"systeemi", 
 	"system":"järjestelmä", 
 	"record":"enkka", 
-	"record":"tietue"
-	}, 
-"nouns65":{
+	"record":"tietue", 
 	"record":"ennätys", 
 	"record":"äänilevy", 
 	"age":"ikä", 
@@ -800,9 +734,7 @@
 	"fan":"fanittaja", 
 	"fan":"diggari", 
 	"fan":"tuuletin", 
-	"letter":"kirje"
-	}, 
-"nouns67":{
+	"letter":"kirje", 
 	"letter":"pokstaavi", 
 	"letter":"kirjain", 
 	"bear":"oksi", 
@@ -824,9 +756,7 @@
 	"situation":"jama", 
 	"situation":"tilanne", 
 	"hole":"kolo", 
-	"hole":"läpi"
-	}, 
-"nouns69":{
+	"hole":"läpi", 
 	"hole":"aukko", 
 	"hole":"kuopanne", 
 	"hole":"aukkokohta", 
@@ -848,9 +778,7 @@
 	"soul":"sielu", 
 	"difference":"eroavaisuus", 
 	"difference":"ero", 
-	"difference":"erilaisuus"
-	}, 
-"nouns71":{
+	"difference":"erilaisuus", 
 	"difference":"erotus", 
 	"wine":"viini", 
 	"road":"baana", 
@@ -872,9 +800,7 @@
 	"mayor":"kunnanjohtaja", 
 	"professor":"professori", 
 	"bottle":"pullo", 
-	"bottle":"puteli"
-	}, 
-"nouns73":{
+	"bottle":"puteli", 
 	"cheese":"juusto", 
 	"summer":"kesä", 
 	"summer":"suvi", 
@@ -896,9 +822,7 @@
 	"pain":"kipu", 
 	"pain":"aristus", 
 	"desk":"tiski", 
-	"monster":"hirviö"
-	}, 
-"nouns75":{
+	"monster":"hirviö", 
 	"monster":"hirmu", 
 	"monster":"epäsikiö", 
 	"cop":"jepari", 
@@ -920,9 +844,7 @@
 	"pig":"sottapytty", 
 	"pig":"nasu", 
 	"pig":"sika", 
-	"loser":"häviäjä"
-	}, 
-"nouns77":{
+	"loser":"häviäjä", 
 	"loser":"luuseri", 
 	"robot":"robotti", 
 	"park":"puisto", 
@@ -944,9 +866,7 @@
 	"grandpa":"paappa", 
 	"grandpa":"ukki", 
 	"grandpa":"vaari", 
-	"hero":"sankari"
-	}, 
-"nouns79":{
+	"hero":"sankari", 
 	"hero":"hyvis", 
 	"hero":"urho", 
 	"hero":"heeros", 
@@ -968,9 +888,7 @@
 	"second":"sekundantti", 
 	"chick":"tipu", 
 	"chick":"pimatsu", 
-	"chick":"pimu"
-	}, 
-"nouns81":{
+	"chick":"pimu", 
 	"chick":"linnunpoikanen", 
 	"chick":"untuvikko", 
 	"chick":"kananpoika", 
@@ -992,9 +910,7 @@
 	"board":"luovi", 
 	"board":"johtokunta", 
 	"spirit":"paloviina", 
-	"spirit":"sprii"
-	}, 
-"nouns83":{
+	"spirit":"sprii", 
 	"spirit":"henkiolento", 
 	"spirit":"tenu", 
 	"cow":"nauta", 
@@ -1016,9 +932,7 @@
 	"rock":"keikunta", 
 	"rock":"kari", 
 	"rock":"rock", 
-	"step":"askelma"
-	}, 
-"nouns85":{
+	"step":"askelma", 
 	"action":"aktio", 
 	"action":"toiminta", 
 	"bill":"vekseli", 
@@ -1040,9 +954,7 @@
 	"bowl":"kulho", 
 	"control":"ohjaus", 
 	"control":"kontrolli", 
-	"control":"hallinta"
-	}, 
-"nouns87":{
+	"control":"hallinta", 
 	"control":"hillintä", 
 	"bedroom":"makkari", 
 	"bedroom":"makuuhuone", 
@@ -1064,9 +976,7 @@
 	"pool":"allas", 
 	"charge":"veloitus", 
 	"charge":"lataus", 
-	"prison":"vankila"
-	}, 
-"nouns89":{
+	"prison":"vankila", 
 	"prison":"säilö", 
 	"photo":"foto", 
 	"button":"nappi", 
@@ -1088,9 +998,7 @@
 	"bike":"fillari", 
 	"bike":"pyörä", 
 	"code":"koodi", 
-	"code":"säännöskokoelma"
-	}, 
-"nouns91":{
+	"code":"säännöskokoelma", 
 	"price":"hinta", 
 	"player":"soittaja", 
 	"player":"pelaaja", 
@@ -1112,9 +1020,7 @@
 	"client":"päämies", 
 	"ground":"mantu", 
 	"ground":"maanpinta", 
-	"ground":"maankamara"
-	}, 
-"nouns93":{
+	"ground":"maankamara", 
 	"project":"hanke", 
 	"project":"projekti", 
 	"shop":"shoppi", 
@@ -1136,9 +1042,7 @@
 	"crime":"rikos", 
 	"meat":"liha", 
 	"lie":"valhe", 
-	"weight":"paino"
-	}, 
-"nouns95":{
+	"weight":"paino", 
 	"weight":"painokerroin", 
 	"weight":"puntti", 
 	"weight":"rasko", 
@@ -1160,9 +1064,7 @@
 	"cousin":"orpana", 
 	"planet":"planeetta", 
 	"planet":"kiertotähti", 
-	"universe":"kaikkeus"
-	}, 
-"nouns97":{
+	"universe":"kaikkeus", 
 	"universe":"universumi", 
 	"genius":"nero", 
 	"genius":"nerokkuus", 
@@ -1184,9 +1086,7 @@
 	"change":"vaihtoraha", 
 	"change":"hilut", 
 	"change":"vaihdos", 
-	"change":"muutos"
-	}, 
-"nouns99":{
+	"change":"muutos", 
 	"change":"muuttuminen", 
 	"driver":"ohjastaja", 
 	"driver":"suhari", 
@@ -1208,9 +1108,7 @@
 	"order":"jöö", 
 	"order":"siivo", 
 	"order":"kertaluku", 
-	"order":"tilaus"
-	}, 
-"nouns101":{
+	"order":"tilaus", 
 	"order":"järjestys", 
 	"event":"spiikki", 
 	"event":"tapahtuma", 
@@ -1232,9 +1130,7 @@
 	"turkey":"kalkkuna", 
 	"thought":"tuuma", 
 	"thought":"aatos", 
-	"thought":"linjaus"
-	}, 
-"nouns103":{
+	"thought":"linjaus", 
 	"thought":"miete", 
 	"gold":"kulta", 
 	"pound":"troy-naula", 
@@ -1256,9 +1152,7 @@
 	"bottom":"pohja", 
 	"bottom":"alapää", 
 	"bottom":"vedenpohja", 
-	"underwear":"alusvaate"
-	}, 
-"nouns105":{
+	"underwear":"alusvaate", 
 	"meeting":"palaveri", 
 	"meeting":"kokous", 
 	"meeting":"tapaaminen", 
@@ -1280,9 +1174,7 @@
 	"advice":"tiedotus", 
 	"center":"keskikohta", 
 	"apple":"omppu", 
-	"apple":"omena"
-	}, 
-"nouns107":{
+	"apple":"omena", 
 	"holiday":"vapaapäivä", 
 	"holiday":"juhlapäivä", 
 	"holiday":"lomapäivä", 
@@ -1304,9 +1196,7 @@
 	"noise":"melu", 
 	"noise":"möly", 
 	"noise":"meteli", 
-	"bread":"leipä"
-	}, 
-"nouns109":{
+	"bread":"leipä", 
 	"bread":"kyrsä", 
 	"type":"kirjake", 
 	"department":"departementti", 
@@ -1328,9 +1218,7 @@
 	"season":"runkosarja", 
 	"season":"vuodenaika", 
 	"season":"tuotantokausi", 
-	"season":"näytäntökausi"
-	}, 
-"nouns111":{
+	"season":"näytäntökausi", 
 	"season":"sesonki", 
 	"miracle":"miraakkeli", 
 	"golf":"golf", 
@@ -1352,9 +1240,7 @@
 	"break":"hengähdysaika", 
 	"break":"tauko", 
 	"break":"lepotauko", 
-	"break":"breikki"
-	}, 
-"nouns113":{
+	"break":"breikki", 
 	"prize":"palkinto", 
 	"corner":"soppi", 
 	"corner":"sopukka", 
@@ -1376,9 +1262,7 @@
 	"assistant":"avustaja", 
 	"assistant":"apulainen", 
 	"judge":"tuomari", 
-	"square":"neliö"
-	}, 
-"nouns115":{
+	"square":"neliö", 
 	"square":"ruutu", 
 	"left":"lyly", 
 	"grandma":"mummu", 
@@ -1400,9 +1284,7 @@
 	"gym":"punttisali", 
 	"gym":"punttis", 
 	"gym":"kuntosali", 
-	"toast":"maljapuhe"
-	}, 
-"nouns117":{
+	"toast":"maljapuhe", 
 	"toast":"paahtoleipä", 
 	"disease":"tauti", 
 	"customer":"asiakas", 
@@ -1424,9 +1306,7 @@
 	"emergency":"hätätilanne", 
 	"mood":"tunnelma", 
 	"mood":"modus", 
-	"mood":"mieliala"
-	}, 
-"nouns119":{
+	"mood":"mieliala", 
 	"mood":"fiilari", 
 	"mood":"mielentila", 
 	"mood":"tapaluokka", 
@@ -1448,9 +1328,7 @@
 	"sauce":"kastike", 
 	"stomach":"vatsa", 
 	"stomach":"mahalaukku", 
-	"stomach":"vatsalaukku"
-	}, 
-"nouns121":{
+	"stomach":"vatsalaukku", 
 	"block":"ploki", 
 	"block":"esto", 
 	"block":"sulkukorkeapaine", 
@@ -1472,9 +1350,7 @@
 	"market":"markkina", 
 	"goodness":"hyvyys", 
 	"pillow":"tyyny", 
-	"belt":"vyö"
-	}, 
-"nouns123":{
+	"belt":"vyö", 
 	"belt":"patruunavyö", 
 	"museum":"museo", 
 	"oil":"öljy", 
@@ -1496,9 +1372,7 @@
 	"fool":"narri", 
 	"fool":"typerys", 
 	"fool":"uuno", 
-	"fool":"houkkio"
-	}, 
-"nouns125":{
+	"fool":"houkkio", 
 	"fruit":"hedelmä", 
 	"roof":"ulkokatto", 
 	"theory":"teoria", 
@@ -1520,9 +1394,7 @@
 	"sound":"soundi", 
 	"interview":"haastattelu", 
 	"spring":"kaltio", 
-	"spring":"springi"
-	}, 
-"nouns127":{
+	"spring":"springi", 
 	"spring":"vieteri", 
 	"spring":"lähde", 
 	"spring":"jousi", 
@@ -1544,9 +1416,7 @@
 	"period":"kuukautiset", 
 	"period":"periodi", 
 	"period":"jakso", 
-	"period":"jaksonaika"
-	}, 
-"nouns129":{
+	"period":"jaksonaika", 
 	"period":"menkat", 
 	"period":"heilahdusaika", 
 	"chip":"nirhama", 
@@ -1568,9 +1438,7 @@
 	"blanket":"peitto", 
 	"blanket":"länketti", 
 	"leader":"johtaja", 
-	"neighborhood":"naapurusto"
-	}, 
-"nouns131":{
+	"neighborhood":"naapurusto", 
 	"neighborhood":"naapuruus", 
 	"whore":"portto", 
 	"sheet":"skuutti", 
@@ -1592,9 +1460,7 @@
 	"move":"muutto", 
 	"move":"siirto", 
 	"research":"tutkimus", 
-	"tongue":"iltti"
-	}, 
-"nouns133":{
+	"tongue":"iltti", 
 	"pill":"pilleri", 
 	"pill":"tabletti", 
 	"snake":"käärme", 
@@ -1616,9 +1482,7 @@
 	"audience":"yleisö", 
 	"term":"toimikausi", 
 	"term":"vaalikausi", 
-	"term":"kestoaika"
-	}, 
-"nouns135":{
+	"term":"kestoaika", 
 	"dance":"tanssi", 
 	"dance":"tanssit", 
 	"dance":"tanssiaiset", 
@@ -1640,9 +1504,7 @@
 	"painting":"taulu", 
 	"painting":"maalaus", 
 	"painting":"maalailu", 
-	"army":"armeija"
-	}, 
-"nouns137":{
+	"army":"armeija", 
 	"gang":"porukka", 
 	"gang":"gängi", 
 	"gang":"poppoo", 
@@ -1664,9 +1526,7 @@
 	"devil":"pahus", 
 	"devil":"juutas", 
 	"liar":"valehtelija", 
-	"nurse":"hoituri"
-	}, 
-"nouns139":{
+	"nurse":"hoituri", 
 	"nurse":"sairaanhoitaja", 
 	"pot":"potti", 
 	"pot":"merta", 
@@ -1688,9 +1548,7 @@
 	"radio":"radio", 
 	"homework":"läksy", 
 	"homework":"kotitehtävä", 
-	"birth":"synnyttäminen"
-	}, 
-"nouns141":{
+	"birth":"synnyttäminen", 
 	"birth":"synty", 
 	"birth":"syntyminen", 
 	"birth":"syntyaika", 
@@ -1712,9 +1570,7 @@
 	"guard":"suojus", 
 	"guard":"vartiomies", 
 	"guard":"vahti", 
-	"contact":"yhteydenotto"
-	}, 
-"nouns143":{
+	"contact":"yhteydenotto", 
 	"contact":"kontakti", 
 	"contact":"kosketus", 
 	"package":"pakkaus", 
@@ -1736,9 +1592,7 @@
 	"waste":"jäte", 
 	"waste":"ryönä", 
 	"writer":"kynäilijä", 
-	"writer":"kirjoittaja"
-	}, 
-"nouns145":{
+	"writer":"kirjoittaja", 
 	"crowd":"väkijoukko", 
 	"crowd":"plutoona", 
 	"hug":"halaus", 
@@ -1760,9 +1614,7 @@
 	"subject":"oppiaine", 
 	"kidney":"munuainen", 
 	"kidney":"munaskuu", 
-	"result":"tulos"
-	}, 
-"nouns147":{
+	"result":"tulos", 
 	"strike":"lakko", 
 	"corn":"liikavarvas", 
 	"grandmother":"mummi", 
@@ -1784,9 +1636,7 @@
 	"can":"pönttö", 
 	"match":"tulitikku", 
 	"match":"ottelu", 
-	"match":"matsi"
-	}, 
-"nouns149":{
+	"match":"matsi", 
 	"match":"verta", 
 	"match":"peli", 
 	"play":"klappi", 
@@ -1808,9 +1658,7 @@
 	"tub":"pulju", 
 	"tub":"saavi", 
 	"option":"optio", 
-	"library":"kirjasto"
-	}, 
-"nouns151":{
+	"library":"kirjasto", 
 	"advertisement":"reklaami", 
 	"advertisement":"mainos", 
 	"danger":"vaara", 
@@ -1832,9 +1680,7 @@
 	"darling":"kullanmuru", 
 	"support":"noja", 
 	"support":"tuki", 
-	"support":"kannatus"
-	}, 
-"nouns153":{
+	"support":"kannatus", 
 	"bubble":"kupla", 
 	"bubble":"pore", 
 	"energy":"tarmo", 
@@ -1856,9 +1702,7 @@
 	"religion":"uskontokunta", 
 	"religion":"ussa", 
 	"snow":"snöge", 
-	"snow":"lumi"
-	}, 
-"nouns155":{
+	"snow":"lumi", 
 	"version":"versio", 
 	"bomb":"pommi", 
 	"faith":"usko", 
@@ -1880,9 +1724,7 @@
 	"freak":"päähänpisto", 
 	"bully":"koulukiusaaja", 
 	"clock":"kello", 
-	"massage":"hieronta"
-	}, 
-"nouns157":{
+	"massage":"hieronta", 
 	"shape":"hahmo", 
 	"style":"tyyli", 
 	"style":"staili", 
@@ -1904,9 +1746,7 @@
 	"midnight":"puoliyö", 
 	"midnight":"keskiyö", 
 	"midnight":"sydänyö", 
-	"series":"sarja"
-	}, 
-"nouns159":{
+	"series":"sarja", 
 	"series":"ohjelmasarja", 
 	"wire":"linjavika", 
 	"candle":"kyntteli", 
@@ -1928,9 +1768,7 @@
 	"attitude":"asenne", 
 	"balloon":"ilmapallo", 
 	"hip":"lanne", 
-	"hip":"lonkka"
-	}, 
-"nouns161":{
+	"hip":"lonkka", 
 	"pet":"lellikki", 
 	"pet":"lemmikki", 
 	"pet":"lemmikkieläin", 
@@ -1952,9 +1790,7 @@
 	"bug":"bugi", 
 	"bug":"pöpö", 
 	"half":"puoli", 
-	"half":"puoliaika"
-	}, 
-"nouns163":{
+	"half":"puoliaika", 
 	"half":"puolikas", 
 	"smoke":"sauhu", 
 	"smoke":"savu", 
@@ -1976,9 +1812,7 @@
 	"degree":"korkeakoulututkinto", 
 	"fortune":"tuuri", 
 	"hit":"isku", 
-	"hit":"osuma"
-	}, 
-"nouns165":{
+	"hit":"osuma", 
 	"invitation":"kutsut", 
 	"search":"haku", 
 	"search":"etsintä", 
@@ -2000,9 +1834,7 @@
 	"snack":"hiukopala", 
 	"sucker":"imijä", 
 	"tag":"tagi", 
-	"tag":"tägi"
-	}, 
-"nouns167":{
+	"tag":"tägi", 
 	"tag":"hippa", 
 	"evidence":"todistusaineisto", 
 	"evidence":"todiste", 
@@ -2024,9 +1856,7 @@
 	"condom":"kondomi", 
 	"director":"ohjaaja", 
 	"menu":"ruokalista", 
-	"menu":"menu"
-	}, 
-"nouns169":{
+	"menu":"menu", 
 	"mystery":"mysteeri", 
 	"chest":"arkku", 
 	"dentist":"hammaslääkäri", 
@@ -2048,9 +1878,7 @@
 	"zone":"vyöhyke", 
 	"zone":"zooni", 
 	"bachelor":"poikamies", 
-	"bachelor":"yksiö"
-	}, 
-"nouns171":{
+	"bachelor":"yksiö", 
 	"chain":"vitja", 
 	"chain":"ketju", 
 	"creature":"olio", 
@@ -2072,9 +1900,7 @@
 	"revenge":"kosto", 
 	"shrimp":"katkarapu", 
 	"shrimp":"pirpana", 
-	"bum":"renttu"
-	}, 
-"nouns173":{
+	"bum":"renttu", 
 	"bum":"peppu", 
 	"bum":"pummi", 
 	"locker":"lukkokaappi", 
@@ -2096,9 +1922,7 @@
 	"basket":"vasu", 
 	"basket":"koppa", 
 	"breakup":"bänks", 
-	"garden":"viheriö"
-	}, 
-"nouns175":{
+	"garden":"viheriö", 
 	"garden":"puutarha", 
 	"patient":"potilas", 
 	"treasure":"aarni", 
@@ -2120,9 +1944,7 @@
 	"string":"nuora", 
 	"string":"nyöri", 
 	"string":"merkkijono", 
-	"property":"ominaisuus"
-	}, 
-"nouns177":{
+	"property":"ominaisuus", 
 	"skill":"taito", 
 	"walk":"kävely", 
 	"lead":"lyijy", 
@@ -2144,9 +1966,7 @@
 	"bite":"puraisu", 
 	"bite":"suupala", 
 	"bullet":"luoti", 
-	"bullet":"ammus"
-	}, 
-"nouns179":{
+	"bullet":"ammus", 
 	"bullet":"kuula", 
 	"forest":"metsä", 
 	"forest":"skutsi", 
@@ -2168,9 +1988,7 @@
 	"mission":"missio", 
 	"soap":"saippua", 
 	"tail":"varjostaja", 
-	"tail":"pyrstö"
-	}, 
-"nouns181":{
+	"tail":"pyrstö", 
 	"tattoo":"tatuointi", 
 	"tattoo":"tatska", 
 	"activity":"aktiivius", 
@@ -2192,9 +2010,7 @@
 	"champagne":"samppanja", 
 	"champagne":"kupliva", 
 	"map":"kartta", 
-	"napkin":"servetti"
-	}, 
-"nouns183":{
+	"napkin":"servetti", 
 	"napkin":"lautasliina", 
 	"punch":"booli", 
 	"punch":"tuurna", 
@@ -2216,9 +2032,7 @@
 	"junk":"džonkki", 
 	"junk":"sälä", 
 	"junk":"roju", 
-	"junk":"tauhka"
-	}, 
-"nouns185":{
+	"junk":"tauhka", 
 	"junk":"roina", 
 	"studio":"studio", 
 	"value":"valööri", 
@@ -2227,29 +2041,15 @@
 	}, 
 "nouns186":{
 	}, 
-"nouns187":{
-	}, 
 "nouns188":{
-	}, 
-"nouns189":{
 	}, 
 "nouns190":{
 	}, 
-"nouns191":{
-	}, 
 "nouns192":{
-	}, 
-"nouns193":{
 	}, 
 "nouns194":{
 	}, 
-"nouns195":{
-	}, 
 "nouns196":{
 	}, 
-"nouns197":{
-	}, 
 "nouns198":{
-	}, 
-"nouns199":{
 	}, 
