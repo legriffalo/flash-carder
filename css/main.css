@@ -180,3 +180,27 @@ select:invalid{
   justify-content: center; 
     
 }
+
+#task_menu{
+    background-color: #9C0D38;
+    position: fixed;
+    left:10vw;  
+    top:10vh;
+    width: 80vw;
+    height:80vh;
+}
+
+#task_menu button{
+    width:80%;
+    margin-top:5vh;
+    height:5vh;
+    width:80%;
+    border-radius: 5vh;
+    background-color: darkolivegreen;
+    color:white;
+}
+#task_menu h3{
+    color:white;
+    font-size: large;
+    font-weight: 600;
+}
