@@ -10,9 +10,71 @@ const randomise = (x) => {
   }
   return y;
 };
+
 // set up basic flashcards roll
 const buildFlashCards = (target, data) => {
   console.log("chose flashes");
+
+  let qs = data;
+
+  console.log(qs);
+
+  let questions = Object.keys(qs);
+  let answers = Object.values(qs);
+
+  document.getElementById(target).innerHTML += `<div id = "flash-control">
+                        <div id = "flash-left"><--</div>
+                       <div id = "flash-right">--></div>
+                       <div id = "flash-back">Back</div>
+                       </div>`;
+
+  for (let i = 0; i < questions.length; i++) {
+    let question = questions[i];
+    let answer = answers[i];
+    let card_no = i;
+
+    console.log(question, answer);
+
+    document.getElementById(target).innerHTML +=
+      `<div class = "flashcard" data-cardno = "card_no${card_no}">
+        <div class = "flippable flash-question">${question}</div>
+        <div class = "flippable flash-answer hidden" >${answer}</div>
+        </div>`;
+  }
+
+  activateListeners("practice");
+  card_number = 1;
+  return 1;
+};
+
+// set up basic flashcards roll
+const buildFlashList = (target, data) => {
+  console.log("chose flashes");
+
+  let qs = data;
+
+  console.log(qs);
+
+  let questions = Object.keys(qs);
+  let answers = Object.values(qs);
+
+  for (let i = 0; i < questions.length; i++) {
+    let question = questions[i];
+    let answer = answers[i];
+    let card_no = i;
+
+    console.log(question, answer);
+
+    document.getElementById(target).innerHTML +=
+      `<div class = "flashcard" data-cardno = "card_no${card_no}">
+        <div class = "flippable flash-question " data-type="">${question}</div>
+        <div class = "flippable flash-answer hidden" data-type="">${answer}</div>
+        </div>`;
+  }
+
+  activateListeners("practice");
+  card_number = 1;
+  return 1;
 };
 
 //function that build matching activities
@@ -37,23 +99,24 @@ const buildMatchem = (target, data) => {
         <div class = "selectable answer " data-type="">${answer}</div>
         </div>`;
   }
-  activateListeners();
+  activateListeners("practice");
   score = 0;
   return 1;
 };
 
-const one_to_four = (target, data, dir) => {
-  console.log("chose 124");
-};
+// const one_to_four = (target, data, dir) => {
+//   console.log("chose 124");
+// };
 
-const typingTask = (target, data, dir) => {
-  console.log("chose type");
-};
+// const typingTask = (target, data, dir) => {
+//   console.log("chose type");
+// };
 
 function buildTask(e) {
   actions = {
     bb: () => hideShow("task_menu"),
     flashcard: () => buildFlashCards("show_zone", flashCards[`${selectedSet}`]),
+    flashlist: () => buildFlashList("show_zone", flashCards[`${selectedSet}`]),
     matchems: () => buildMatchem("show_zone", flashCards[`${selectedSet}`]),
     onetofour: () =>
       buildOneToFour("show_zone", flashCards[`${selectedSet}`], 1),
@@ -156,11 +219,23 @@ const checkMatch = (newSelection, selected) => {
   }
 };
 //activate eventListeners for matching
-const activateListeners = () => {
+const activateListeners = (target) => {
   console.log("adding listeners");
+  // Add listeners to make basic flashcards work
+  let flippables = document
+    .getElementById(target)
+    .getElementsByClassName("flippable");
 
+  for (let i = 0; i < flippables.length; i++) {
+    flippables[i].addEventListener("pointerdown", (e) => {
+      const siblings = [...e.currentTarget.parentElement.children];
+      siblings.forEach((el) => el.classList.toggle("hidden"));
+    });
+  }
+
+  // Add listeners to operate matchems
   let selectables = document
-    .getElementById("practice")
+    .getElementById(target)
     .getElementsByClassName("selectable");
   for (let i = 0; i < selectables.length; i++) {
     selectables[i].addEventListener("pointerdown", (e) => {
