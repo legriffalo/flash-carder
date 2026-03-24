@@ -99,21 +99,123 @@ html{
 
 }
 
-.flashcard{
-    display:block;
-    background-color: white;
-    margin-top: 2px;
-}
-
-#flash-control{
-    width:100%;
-    height:20%;
-    display:flex;
+#flash-control {
+    width: 80%;            /* Matches the width of your cards */
+    margin: 10px auto;     /* Centers the control bar horizontally */
+    height: 60px;          /* Fixed height is usually better for buttons than % */
+    display: flex;
     flex-direction: row;
+    justify-content: space-between; /* Spreads buttons to the edges */
+    align-items: center;
+    gap: 15px;             /* Space between the buttons */
 }
 
-#flash-control div{
-    width:30%;
-    height:100%;
-    background:white;
+#flash-control div {
+    flex: 1;               /* Forces all buttons to take up equal width */
+    height: 100%;
+    background-color: #ffffff;
+    color: #001f3f;        /* Navy text */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 12px;   /* Rounded "pill" style */
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    user-select: none;     /* Prevents text highlighting on fast clicks */
 }
+
+/* Hover & Active States */
+#flash-control div:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+.flashlist {
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    margin: 10px auto;
+    background-color: #ffffff;
+    margin-top: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 5px solid #001f3f; /* Navy accent to match your app */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the sub-divs (Flashcard pairs) */
+.flashlist div {
+    padding: 5px 0;
+    font-family: sans-serif;
+    flex: 1;                /* Take up all available vertical space */
+    width: 100%;
+}
+
+/* Front of card */
+.flashlist div:first-child {
+    font-weight: bold;
+    color: #001f3f; /* Navy text */
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 5px;
+}
+
+/* Back of card (The alternating pair) */
+.flashlist div:last-child {
+    color: #555555;
+    font-style: italic;
+}
+
+.flashcard {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 80%;      /* Set width to 80% */
+    margin: 20px auto; /* 'auto' centers the card horizontally */
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border-top: 8px solid #001f3f;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Keeps children inside the rounded corners */
+    transition: transform 0.3s ease;
+}
+
+/* Each "side" of the card now fills the space */
+.flashcard div {
+    display: flex;
+    align-items: center;    /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    flex: 1;                /* Take up all available vertical space */
+    width: 100%;            /* Take up all horizontal space */
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* Front of card */
+.flashcard div:first-child {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #001f3f;
+    /* If you still want a divider, use a light border-bottom */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Back of card */
+.flashcard div:last-child {
+    font-size: 1.8rem;
+    color: #444444;
+    background-color: #fcfcfc; /* Slight tint to distinguish from front */
+}
+

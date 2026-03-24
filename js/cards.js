@@ -25,7 +25,6 @@ const buildFlashCards = (target, data) => {
   document.getElementById(target).innerHTML += `<div id = "flash-control">
                         <div id = "flash-left"><--</div>
                        <div id = "flash-right">--></div>
-                       <div id = "flash-back">Back</div>
                        </div>`;
 
   for (let i = 0; i < questions.length; i++) {
@@ -36,16 +35,27 @@ const buildFlashCards = (target, data) => {
     console.log(question, answer);
 
     document.getElementById(target).innerHTML +=
-      `<div class = "flashcard" data-cardno = "card_no${card_no}">
+      `<div class = "flashcard ${i == 0 ? "" : "hidden"}" data-cardno = "card_no${card_no}">
         <div class = "flippable flash-question">${question}</div>
         <div class = "flippable flash-answer hidden" >${answer}</div>
         </div>`;
   }
 
   activateListeners("practice");
-  card_number = 1;
+
   return 1;
 };
+
+function changeflashcard(dir) {
+  const cards = Array.from(document.querySelectorAll(".flashcard"));
+  const currentIndex = cards.findIndex(
+    (card) => !card.classList.contains("hidden"),
+  );
+  const nextIndex = (currentIndex + dir + cards.length) % cards.length;
+  cards.forEach((card, index) => {
+    card.classList.toggle("hidden", index !== nextIndex);
+  });
+}
 
 // set up basic flashcards roll
 const buildFlashList = (target, data) => {
@@ -66,7 +76,7 @@ const buildFlashList = (target, data) => {
     console.log(question, answer);
 
     document.getElementById(target).innerHTML +=
-      `<div class = "flashcard" data-cardno = "card_no${card_no}">
+      `<div class = "flashlist" data-cardno = "card_no${card_no}">
         <div class = "flippable flash-question " data-type="">${question}</div>
         <div class = "flippable flash-answer hidden" data-type="">${answer}</div>
         </div>`;
@@ -104,9 +114,16 @@ const buildMatchem = (target, data) => {
   return 1;
 };
 
-// const one_to_four = (target, data, dir) => {
-//   console.log("chose 124");
-// };
+const one_to_four = (target, data, dir) => {
+  const [questions, answers] =
+    dir === 1
+      ? [Object.keys(data), Object.values(data)]
+      : [Object.values(data), Object.keys(data)];
+
+  // now we build the set up
+
+  // div one-to_four with number -->  div question and 4x div answer with random other words in
+};
 
 // const typingTask = (target, data, dir) => {
 //   console.log("chose type");
@@ -218,9 +235,10 @@ const checkMatch = (newSelection, selected) => {
   } else {
   }
 };
-//activate eventListeners for matching
+//activate eventListeners for tasks
 const activateListeners = (target) => {
   console.log("adding listeners");
+
   // Add listeners to make basic flashcards work
   let flippables = document
     .getElementById(target)
@@ -232,6 +250,16 @@ const activateListeners = (target) => {
       siblings.forEach((el) => el.classList.toggle("hidden"));
     });
   }
+
+  const left = document.getElementById("flash-left");
+  const right = document.getElementById("flash-right");
+
+  left?.addEventListener("pointerdown", () => {
+    changeflashcard(-1);
+  });
+  right?.addEventListener("pointerdown", () => {
+    changeflashcard(-1);
+  });
 
   // Add listeners to operate matchems
   let selectables = document

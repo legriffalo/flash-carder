@@ -5,10 +5,10 @@
 }
 
 .hidden{
-    display:none;
-    height:0px;
-    opacity:0;
-    overflow-y: none;
+    display:none !important;
+    height:0px !important;
+    opacity:0 !important;
+    overflow-y: none !important;
 }
 
 #main_buttons{
