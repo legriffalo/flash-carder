@@ -2,6 +2,7 @@ selected = { question: 0, answer: 0 };
 previousSelection = "";
 let score = 0;
 let wrong = 0;
+
 // function to jumble lists for matching activities
 const randomise = (x) => {
   let y = [];
@@ -10,6 +11,11 @@ const randomise = (x) => {
   }
   return y;
 };
+
+function getRandomValues(data, count = 3) {
+  const values = Object.values(data);
+  return values.sort(() => 0.5 - Math.random()).slice(0, count);
+}
 
 // set up basic flashcards roll
 const buildFlashCards = (target, data) => {
@@ -114,13 +120,31 @@ const buildMatchem = (target, data) => {
   return 1;
 };
 
-const one_to_four = (target, data, dir) => {
+const buildOneToFour = (target, data, dir) => {
   const [questions, answers] =
     dir === 1
       ? [Object.keys(data), Object.values(data)]
       : [Object.values(data), Object.keys(data)];
 
+  const target_el = document.getElementById(target);
   // now we build the set up
+  questions.forEach((question) => {
+    options = "";
+    true_answer = data[question];
+    let answers = getRandomValues(data, 3);
+    answers.push(true_answer);
+
+    answers.forEach((answer) => {
+      options += `<div class = "one-tofour-option ${answer == data[question] ? "correct" : "not"}"> ${answer} </div>`;
+    });
+
+    target_el.innerHTML += `<div class = "one-to-four">
+                              <div class = "one-to-four-question">${question}</div>
+                              <div class = "one-to-four-answer">
+                                ${options}
+                              </div>
+                            </div>`;
+  });
 
   // div one-to_four with number -->  div question and 4x div answer with random other words in
 };
