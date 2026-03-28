@@ -126,32 +126,62 @@ const buildOneToFour = (target, data, dir) => {
       ? [Object.keys(data), Object.values(data)]
       : [Object.values(data), Object.keys(data)];
 
+  let new_data = Object.fromEntries(
+    questions.map((question, index) => [question, answers[index]]),
+  );
+
   const target_el = document.getElementById(target);
   // now we build the set up
   questions.forEach((question) => {
+    let i = questions.indexOf(question);
     options = "";
-    true_answer = data[question];
-    let answers = getRandomValues(data, 3);
+    true_answer = new_data[question];
+    let data_copy = { ...new_data };
+    delete data_copy[question];
+    let answers = getRandomValues(data_copy, 3);
     answers.push(true_answer);
+    answers = randomise(answers);
 
     answers.forEach((answer) => {
-      options += `<div class = "one-tofour-option ${answer == data[question] ? "correct" : "not"}"> ${answer} </div>`;
+      options += `<div class = "one-to-four-option ${answer == new_data[question] ? "correct-choice" : "not"}"> ${answer} </div>`;
     });
 
-    target_el.innerHTML += `<div class = "one-to-four">
+    target_el.innerHTML += `<div class = "one-to-four ${i == 0 ? "" : "hidden"}">
                               <div class = "one-to-four-question">${question}</div>
                               <div class = "one-to-four-answer">
                                 ${options}
                               </div>
                             </div>`;
   });
-
-  // div one-to_four with number -->  div question and 4x div answer with random other words in
+  activateListeners("practice");
+  score = 0;
+  return 1;
 };
 
-// const typingTask = (target, data, dir) => {
-//   console.log("chose type");
-// };
+const buildTypingTask = (target, data, dir) => {
+  const target_el = document.getElementById(target);
+  console.log("chose type typing");
+  const [questions, answers] =
+    dir === 1
+      ? [Object.keys(data), Object.values(data)]
+      : [Object.values(data), Object.keys(data)];
+
+  let new_data = Object.fromEntries(
+    questions.map((question, index) => [question, answers[index]]),
+  );
+
+  target_el.innerHTML += `<div class = "typing-task">
+                            <div class = "typing-questions"></div>
+                            <div class = "typing-input">
+                              <input type="text" placeholder="answer"></input>
+                            </div>
+                            <div id = "submit_writing" class = "typing-submit">check</div>
+                            </div>`;
+
+  activateListeners("practice");
+  score = 0;
+  return 1;
+};
 
 function buildTask(e) {
   actions = {
@@ -163,14 +193,40 @@ function buildTask(e) {
       buildOneToFour("show_zone", flashCards[`${selectedSet}`], 1),
     onetofour2: () =>
       buildOneToFour("show_zone", flashCards[`${selectedSet}`], 0),
-    type: () => buildOneToFour("show_zone", flashCards[`${selectedSet}`], 0),
-    type2: () => buildOneToFour("show_zone", flashCards[`${selectedSet}`], 0),
+    typing: () => buildTypingTask("show_zone", flashCards[`${selectedSet}`], 1),
+    typing2: () =>
+      buildTypingTask("show_zone", flashCards[`${selectedSet}`], 0),
   };
 
   actions[e.target.id]();
   console.log("picked", e.target.id);
   hideShow("task_menu");
 }
+
+// check 1-2-4 is correct
+const checkCorrect = (el) => {
+  el.classList.contains("correct-choice") ? showNextquestion() : (wrong += 1);
+  console.log(score, wrong);
+};
+
+const showNextquestion = () => {
+  score += 1;
+  const questions = Array.from(document.querySelectorAll(".one-to-four"));
+  const currentIndex = questions.findIndex(
+    (question) => !question.classList.contains("hidden"),
+  );
+  const nextIndex = currentIndex + 1;
+  console.log(nextIndex, questions.length);
+  nextIndex == questions.length
+    ? (() => {
+        scores[selectedSet] =
+          `${score}/${Object.keys(flashCards[selectedSet]).length + wrong}`;
+        saveData();
+      })()
+    : questions.forEach((card, index) => {
+        card.classList.toggle("hidden", index !== nextIndex);
+      });
+};
 
 // use two elements to check if they match
 const checkMatch = (newSelection, selected) => {
@@ -256,6 +312,7 @@ const checkMatch = (newSelection, selected) => {
     console.log("all questions completed!!!!\n\n\n\n\n");
     scores[selectedSet] =
       `${score}/${Object.keys(flashCards[selectedSet]).length + wrong}`;
+    saveData();
   } else {
   }
 };
@@ -294,4 +351,21 @@ const activateListeners = (target) => {
       checkMatch(e.target, selected);
     });
   }
+
+  // Add listeners to handle 1 to 4
+  let answer_options = document
+    .getElementById(target)
+    .getElementsByClassName("one-to-four-option");
+
+  for (let i = 0; i < answer_options.length; i++) {
+    answer_options[i].addEventListener("pointerdown", (e) => {
+      checkCorrect(e.target);
+    });
+  }
+  console.log("All listeners added");
+
+  // Add listeners for spelling task
+  document
+    .getElementById("submit_writing")
+    .addEventListener("pointerdown", (e) => {});
 };

@@ -219,3 +219,28 @@ html{
     background-color: #fcfcfc; /* Slight tint to distinguish from front */
 }
 
+.one-to-four-question{
+    width:80%;
+    height:10vh;
+    font-size: x-large;
+    margin-bottom:10vh;
+    margin-left: 10%;
+    border-radius: 1vh;
+    background-color: #444444;
+    align-content: center;    /* Center text vertically */
+
+}
+
+
+.one-to-four-option{
+    background-color: white;
+    width:40%;
+    height:10vh;
+    font-size: x-large;
+    float: left;
+    margin-bottom:10vh;
+    margin-left: 5%;
+    border-radius: 1vh;
+    background-color: #444444;
+    align-content: center;    /* Center text vertically */
+}
