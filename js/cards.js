@@ -169,14 +169,18 @@ const buildTypingTask = (target, data, dir) => {
   let new_data = Object.fromEntries(
     questions.map((question, index) => [question, answers[index]]),
   );
+  questions.forEach((question) => {
+    let i = questions.indexOf(question);
+    target_el.innerHTML += `<div class = "typing-task ${i == 0 ? "" : "hidden"}">
+                              <div id = "question-window" class = "typing-questions">${question}</div>
+                              
+                              <div class = "hidden correct-answer-typing">${new_data[question]}</div>`;
+  });
 
-  target_el.innerHTML += `<div class = "typing-task">
-                            <div class = "typing-questions"></div>
-                            <div class = "typing-input">
-                              <input type="text" placeholder="answer"></input>
-                            </div>
-                            <div id = "submit_writing" class = "typing-submit">check</div>
-                            </div>`;
+  target_el.innerHTML += `<div class = "typing-input">
+                                <input id = "answer-input" type="text" placeholder="answer"></input>
+                              </div>
+                          <div id = "submit_writing" class = "typing-submit">check</div>`;
 
   activateListeners("practice");
   score = 0;
@@ -204,14 +208,51 @@ function buildTask(e) {
 }
 
 // check 1-2-4 is correct
-const checkCorrect = (el) => {
-  el.classList.contains("correct-choice") ? showNextquestion() : (wrong += 1);
+const checkOneToFourCorrect = (el) => {
+  el.classList.contains("correct-choice")
+    ? showNextOneToFourquestion()
+    : (wrong += 1);
   console.log(score, wrong);
 };
 
-const showNextquestion = () => {
+const showNextOneToFourquestion = () => {
   score += 1;
   const questions = Array.from(document.querySelectorAll(".one-to-four"));
+  const currentIndex = questions.findIndex(
+    (question) => !question.classList.contains("hidden"),
+  );
+  const nextIndex = currentIndex + 1;
+  console.log(nextIndex, questions.length);
+  nextIndex == questions.length
+    ? (() => {
+        scores[selectedSet] =
+          `${score}/${Object.keys(flashCards[selectedSet]).length + wrong}`;
+        saveData();
+      })()
+    : questions.forEach((card, index) => {
+        card.classList.toggle("hidden", index !== nextIndex);
+      });
+};
+
+// check if type task is correct
+const checkTypingTask = () => {
+  const selectedQuestion = [
+    ...document.querySelectorAll(".typing-task"),
+  ].filter((el) => !el.classList.contains("hidden"))[0];
+
+  let correctAnswer = selectedQuestion.getElementsByClassName(
+    "correct-answer-typing",
+  )[0].textContent;
+  inputAnswer = document.getElementById("answer-input").value;
+  console.log(inputAnswer, correctAnswer);
+  // let check = inputAnswer == correctAnswer ? true : false;
+  return inputAnswer == correctAnswer;
+};
+
+const showNextTypingQuestion = () => {
+  score += 1;
+  document.getElementById("answer-input").value = "";
+  const questions = Array.from(document.querySelectorAll(".typing-task"));
   const currentIndex = questions.findIndex(
     (question) => !question.classList.contains("hidden"),
   );
@@ -359,13 +400,24 @@ const activateListeners = (target) => {
 
   for (let i = 0; i < answer_options.length; i++) {
     answer_options[i].addEventListener("pointerdown", (e) => {
-      checkCorrect(e.target);
+      checkOneToFourCorrect(e.target);
+    });
+  }
+
+  // Add listeners for spelling task
+  let submitButton = document.getElementById("submit_writing");
+
+  if (submitButton) {
+    submitButton.addEventListener("pointerdown", (e) => {
+      console.log(checkTypingTask());
+
+      checkTypingTask()
+        ? (() => {
+            console.log("GOT TRUE");
+            showNextTypingQuestion();
+          })()
+        : (wrong += 1);
     });
   }
   console.log("All listeners added");
-
-  // Add listeners for spelling task
-  document
-    .getElementById("submit_writing")
-    .addEventListener("pointerdown", (e) => {});
 };
