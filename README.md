@@ -1,7 +1,7 @@
 # 👋 Hei, this is flashcarder
 ## 📝 Project Description
 
-This was a project I built to helo me pick up new words while learnign Finnish, simple PWA allows quick generation of language learnign sets, key-value pair format
+This was a project I built to help me pick up new words while learnign Finnish, simple PWA allows quick generation of language learnign sets, key-value pair format
 Stores data in localStorage in JSON format. The PWA is hosted on my alt account to avoid any clashes with other PWAs
 
 ### ✨ Key Features
