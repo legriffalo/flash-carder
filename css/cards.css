@@ -1,300 +1,181 @@
-html{
-    height: 100%;
-    background: radial-gradient(circle,#fff, #BEC3C6);
+/* 1. Global Reset & Background */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-.container{
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* Soft gradient that feels premium */
+    background: radial-gradient(circle at top, #ffffff, #dbe2e8);
+}
+
+/* 2. Main Container */
+.container {
     background-color: #1C3144;
     text-align: center;
-    border-radius: 5vw;
+    border-radius: 24px;
+    padding: 20px;
+    max-width: 600px; /* Keeps UI from stretching too wide on desktop */
+    margin: 20px auto;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-.matchem_row{
-    display: flex;
-    align-items: center;
-    margin:auto;
-    margin-bottom: 3px;
-    /* justify-content: center; */
-    /* gap:1em; */
-
-    width:95%;
-    /* border-style: solid;
-    border-radius:20vh;
-    color:red; */
-    flex-grow: 1;
-
-}
-
-.matchem_row .selectable{
-    /* border-style: dashed; */
-    border-radius:20vh; 
-    width:50%;
-    font-size: 2vh;
-    /* flex-grow:1; */
-    height:6vh;
-}
-
-.matchem_row .unselectable{
-    /* border-style: dashed; */
-    border-radius:20vh; 
-    width:50%;
-    font-size: 2vh;
-    /* flex-grow:1; */
-    height:6vh;
-}
-
-.question{
-    color:black;
-    /* border-style:solid;
-    text-align: center; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    border-style:solid;
-    max-width:50%;
-    background-color:#C57B57;
-}
-
-.answer{
-    color:black;
-    /* text-align: center;
-    vertical-align: middle; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-style:solid;
-    max-width:50%;
-    /* height:100%; */
-    background-color:#F7DBA7;
-
-}
-
-.picked{
-    background-color:black;
-    color:red;
-}
-
-.correct{
-    background-color:green;
-    color:white;
-}
-
-#demo_zone{margin-top: 2vh;}
-
-.active_button{
-    background-color:#9C0D38;
-    color:#F6F8FF;
-}
-
-#scores{
-    color:white;
-    font-size: 2.3vh;
-    margin-bottom:2vh;
-}
-
-.flippables{
-    background-color: #9C0D38;
-    width:80%;
-
-}
-
-#flash-control {
-    width: 80%;            /* Matches the width of your cards */
-    margin: 10px auto;     /* Centers the control bar horizontally */
-    height: 60px;          /* Fixed height is usually better for buttons than % */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Spreads buttons to the edges */
-    align-items: center;
-    gap: 15px;             /* Space between the buttons */
-}
-
-#flash-control div {
-    flex: 1;               /* Forces all buttons to take up equal width */
-    height: 100%;
-    background-color: #ffffff;
-    color: #001f3f;        /* Navy text */
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    border-radius: 12px;   /* Rounded "pill" style */
-    font-family: sans-serif;
+#scores {
+    color: #F7DBA7; /* Gold accent */
+    font-size: 1.2rem;
     font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease;
-    user-select: none;     /* Prevents text highlighting on fast clicks */
+    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
-/* Hover & Active States */
-#flash-control div:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-}
-
-
-.flashlist {
+/* 3. Match-em Interaction Styles */
+.matchem_row {
     display: flex;
-    flex-direction: column;
-    width:80%;
-    margin: 10px auto;
-    background-color: #ffffff;
-    margin-top: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border-left: 5px solid #001f3f; /* Navy accent to match your app */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Styling the sub-divs (Flashcard pairs) */
-.flashlist div {
-    padding: 5px 0;
-    font-family: sans-serif;
-    flex: 1;                /* Take up all available vertical space */
+    gap: 10px;
     width: 100%;
+    margin-bottom: 12px;
 }
 
-/* Front of card */
-.flashlist div:first-child {
-    font-weight: bold;
-    color: #001f3f; /* Navy text */
-    border-bottom: 1px solid #eeeeee;
-    margin-bottom: 5px;
-}
-
-/* Back of card (The alternating pair) */
-.flashlist div:last-child {
-    color: #555555;
-    font-style: italic;
-}
-
-.flashcard {
+.selectable, .unselectable {
+    flex: 1;
+    height: 60px;
     display: flex;
-    flex-direction: column;
-    height: 80vh;
-    width: 80%;      /* Set width to 80% */
-    margin: 20px auto; /* 'auto' centers the card horizontally */
-    box-sizing: border-box;
-    background-color: #ffffff;
-    margin-top: 20px;
-    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
     cursor: pointer;
-    border-top: 8px solid #001f3f;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Keeps children inside the rounded corners */
+    transition: all 0.2s ease;
+    border: none;
+    font-weight: 600;
+}
+
+.question { 
+    background-color: #C57B57; /* Terracotta */
+    color: white; 
+}
+
+.answer { 
+    background-color: #F7DBA7; /* Soft Gold */
+    color: #1C3144; 
+}
+
+/* Interaction States */
+.picked {
+    background-color: #ffffff !important;
+    color: #1C3144 !important;
+    transform: scale(0.95);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
+
+.correct {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* 4. Flashcards & Lists */
+.flashcard, .flashlist {
+    background-color: #ffffff;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-top: 6px solid #C57B57;
     transition: transform 0.3s ease;
 }
 
-/* Each "side" of the card now fills the space */
+.flashcard { height: 60vh; } /* Slightly shorter for better UI balance */
+
 .flashcard div {
     display: flex;
-    align-items: center;    /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-    flex: 1;                /* Take up all available vertical space */
-    width: 100%;            /* Take up all horizontal space */
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
     text-align: center;
 }
 
-/* Front of card */
 .flashcard div:first-child {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #001f3f;
-    /* If you still want a divider, use a light border-bottom */
-    border-bottom: 1px solid #f0f0f0;
+    font-size: 2rem;
+    color: #1C3144;
+    border-bottom: 1px solid #eee;
 }
 
-/* Back of card */
-.flashcard div:last-child {
-    font-size: 1.8rem;
-    color: #444444;
-    background-color: #fcfcfc; /* Slight tint to distinguish from front */
+/* 5. Inputs & Multiple Choice (One-to-Four) */
+.one-to-four-question, .typing-questions {
+    background-color: #3e5c76;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
-.one-to-four-question{
-    width:80%;
-    height:10vh;
-    font-size: x-large;
-    margin-bottom:10vh;
-    margin-left: 10%;
-    border-radius: 1vh;
-    background-color: #444444;
-    align-content: center;    /* Center text vertically */
-
+.one-to-four-option, .typing-input, .typing-submit {
+    width: 100%;
+    height: 55px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
-
-.one-to-four-option{
+.one-to-four-option {
     background-color: white;
-    width:40%;
-    height:10vh;
-    font-size: x-large;
-    float: left;
-    margin-bottom:10vh;
-    margin-left: 5%;
-    border-radius: 1vh;
-    background-color: #444444;
-    align-content: center;    /* Center text vertically */
+    color: #1C3144;
+    font-weight: bold;
+    box-shadow: 0 4px 0 #bdc3c7;
 }
 
-.typing-questions{
-    background-color: white;
-    width:90%;
-    height:10vh;
-    font-size: x-large;
-    float: left;
-    margin-bottom:10vh;
-    margin-left: 5%;
-    border-radius: 1vh;
-    background-color: #444444;
-    align-content: center;    /* Center text vertically */  
+.one-to-four-option:active {
+    transform: translateY(3px);
+    box-shadow: none;
 }
 
-.typing-input{
-    width:90%;
-    height:10vh;
-    font-size: x-large;
-    float: left;
-    margin-bottom:10vh;
-    margin-left: 5%;
-    border-radius: 1vh;
-    align-content: center;    /* Center text vertically */  
+.typing-input input {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    padding: 0 15px;
+    text-align: center;
 }
 
-.typing-input input{
-    width:100%;
-    height:100%;
-    font-size: x-large;
+.typing-submit {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
 }
 
-.typing-input{
-    width:90%;
-    height:10vh;
-    font-size: x-large;
-    float: left;
-    margin-bottom:10vh;
-    margin-left: 5%;
-    border-radius: 1vh;
-    align-content: center;    /* Center text vertically */  
+/* 6. Controls */
+#flash-control {
+    display: flex;
+    gap: 15px;
+    width: 90%;
+    margin: 0 auto;
 }
 
-
-.typing-submit{
-    background-color:green;
-    width:90%;
-    height:10vh;
-    font-size: x-large;
-    float: left;
-    margin-bottom:10vh;
-    margin-left: 5%;
-    border-radius: 1vh;
-    align-content: center;    /* Center text vertically */  
+#flash-control div {
+    flex: 1;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #1C3144;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #bdc3c7;
 }
+
+#flash-control div:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.hidden { display: none !important; }

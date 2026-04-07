@@ -20,14 +20,10 @@ function getRandomValues(data, count = 3) {
 // set up basic flashcards roll
 const buildFlashCards = (target, data) => {
   console.log("chose flashes");
-
   let qs = data;
-
   console.log(qs);
-
   let questions = Object.keys(qs);
   let answers = Object.values(qs);
-
   document.getElementById(target).innerHTML += `<div id = "flash-control">
                         <div id = "flash-left"><--</div>
                        <div id = "flash-right">--></div>
@@ -66,7 +62,6 @@ function changeflashcard(dir) {
 // set up basic flashcards roll
 const buildFlashList = (target, data) => {
   console.log("chose flashes");
-
   let qs = data;
 
   console.log(qs);
@@ -189,7 +184,9 @@ const buildTypingTask = (target, data, dir) => {
 
 function buildTask(e) {
   actions = {
-    bb: () => hideShow("task_menu"),
+    bb: () => {
+      console.log("clicke dback button");
+    },
     flashcard: () => buildFlashCards("show_zone", flashCards[`${selectedSet}`]),
     flashlist: () => buildFlashList("show_zone", flashCards[`${selectedSet}`]),
     matchems: () => buildMatchem("show_zone", flashCards[`${selectedSet}`]),
